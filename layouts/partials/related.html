@@ -1,0 +1,22 @@
+{{ if .Site.Params.showRelated }}
+
+{{- $related := .Site.RegularPages.Related . | first 5 -}}
+{{- with $related -}}
+
+<p class="related-title">{{ i18n "see-also" }}</p>
+<ul class="related">
+ {{ range . }}
+ <li>
+    <a href="{{ .RelPermalink }}">
+        <div class="content">
+            <p class="title">{{ .LinkTitle }}</p>
+            <p>{{ .Summary | truncate 120 }}</p>
+        </div>
+    </a>
+ </li>
+ {{ end }}
+</ul>
+
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,9 @@
+all-posts = "All posts »"
+see-also = "See Also"
+not-found = "404 Not Found"
+
+first-page = "« first page"
+previous-page = "previous"
+page-number = "Page {{ .number }} of {{ .total }}"
+next-page = "next"
+last-page = "last page »"

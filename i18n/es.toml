@@ -1,0 +1,9 @@
+all-posts = "Todas las entradas »"
+see-also = "Relacionado"
+not-found = "404 No encontrado"
+
+first-page = "« primera página"
+previous-page = "anterior"
+page-number = "Página {{ .number }} de {{ .total }}"
+next-page = "siguiente"
+last-page = "última página »"

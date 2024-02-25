@@ -1,0 +1,36 @@
+{{- define "main" -}}
+
+<h1>{{ .Title }}</h1>
+
+{{- .Content -}}
+
+{{- range (.Paginate .Pages).Pages -}}
+  <a class="page-link" href="{{ .RelPermalink }}">
+    <div class="link-content">
+      <p class="title">{{ .LinkTitle }}</p>
+      <p>{{ .Summary | plainify | truncate 150 }}</p>
+    </div>
+  </a>
+{{- end -}}
+
+{{- if gt .Paginator.TotalPages 1 -}}
+<div class="pagination">
+  <span class="previous">
+      {{- if .Paginator.HasPrev -}}
+      <a href="{{ .Paginator.First.URL }}">{{ i18n "first-page" }}</a>
+      <a href="{{ .Paginator.Prev.URL }}">{{ i18n "previous-page" }}</a>
+      {{- end -}}
+  </span>
+
+  <span class="current">{{ i18n "page-number" (dict "number" .Paginator.PageNumber "total" .Paginator.TotalPages) }}</span>
+
+  <span class="next">
+      {{- if .Paginator.HasNext -}}
+      <a href="{{ .Paginator.Next.URL }}">{{ i18n "next-page" }}</a>
+      <a href="{{ .Paginator.Last.URL }}">{{ i18n "last-page" }}</a>
+      {{- end -}}
+  </span>
+</div>
+{{- end -}}
+
+{{- end -}}

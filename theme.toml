@@ -1,0 +1,20 @@
+name = 'Material'
+license = 'MIT'
+licenselink = 'https://github.com/alcarazzam/hugo-material/blob/main/LICENSE'
+description = 'Material theme for Hugo'
+
+homepage = 'https://github.com/alcarazzam/hugo-material'
+# demosite = 'https://alcarazzam.github.io/hugo-material'
+
+tags = [
+  'blog',
+  'material'
+]
+features = [
+  'responsive',
+  'blog'
+]
+
+[author]
+  name = 'Manuel Alcaraz Zambrano'
+  homepage = 'https://github.com/alcarazzam/'

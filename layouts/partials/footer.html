@@ -1,0 +1,5 @@
+{{ if .Site.Params.footerHtml }}
+    <p>{{ .Site.Params.footerHtml | safeHTML }}</p>
+{{ end }}
+
+{{ partial "menu.html" (dict "menuID" "footer" "page" .) }}

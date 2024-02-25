@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{ partialCached "head/css.html" . }}
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
+{{- end }}
+{{ if (and .IsNode (not .IsHome) ) }}
+<meta name="robots" content="noindex">
+{{ end }}
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ end }}{{ end }}">
+
+{{- if and .IsPage (eq .Type "posts") }}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title | plainify }},
+    "author": {
+        "@type": "Person",
+        "name": {{ .Params.author | default site.Params.author }}
+    },
+    "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify  }}{{ end }},
+    "publisher": {
+        "@type": "Organization",
+        "name": {{ site.Title }}
+    },
+    "datePublished": {{ .PublishDate }},
+    "dateModified": {{ .Lastmod }},
+    "mainEntityOfPage": {{ .Permalink }}
+}
+</script>
+{{- end -}}
