@@ -7,7 +7,7 @@ Material is a theme for Hugo.
 - Responsive design.
 - Automatic dark theme.
 - Show related pages.
-- Supported languages: :us:, :en:
+- Supported languages: :us:, :es:
 
 ## Installation
 
@@ -63,7 +63,7 @@ paginate = 10
 
 ## Roadmap
 
-- [ ] Customize theme.
+- [x] Customize theme.
 - [ ] Archive page.
 - [ ] LaTeX/TeX support.
 
