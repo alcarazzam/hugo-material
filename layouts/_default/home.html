@@ -1,8 +1,12 @@
-{{ define "main" -}}
+{{- define "main" -}}
 
 {{- .Content -}}
 
-{{- range (where site.RegularPages "Type" "posts").Limit 5 -}}
+{{- $pages := (where site.RegularPages "Type" "posts").Limit 5 -}}
+
+{{- with $pages -}}
+
+{{- range . -}}
   <a class="page-link" href="{{ .RelPermalink }}">
     <div class="link-content">
       <p class="title">{{ .LinkTitle }}</p>
@@ -14,5 +18,7 @@
 <div style="display: flex; justify-content: end;">
   <a href="{{ absURL "posts/" }}" class="button">{{ i18n "all-posts" }}</a>
 </div>
+
+{{- end -}}
 
 {{- end -}}
