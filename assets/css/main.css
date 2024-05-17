@@ -37,6 +37,15 @@ li {
   line-height: 1.4em;
 }
 
+pre {
+  background: var(--md-sys-color-surface-container);
+  padding: 16px;
+  margin-block: 1em;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 1em;
+}
+
 .site-header {
   display: flex;
 }
