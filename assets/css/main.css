@@ -254,11 +254,6 @@ div.serie {
   margin-block: 3em 1em;
 }
 
-div.serie > p {
-  font-size: 16px;
-  font-weight: 500;
-}
-
 ul.serie {
   background: var(--md-sys-color-surface-container);
   color: var(--md-sys-color-on-surface);
@@ -280,6 +275,7 @@ ul.serie > li > a {
   line-height: 24px;
   font-size: 16px;
   padding: 0 16px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul.serie > li > a:hover {
@@ -303,10 +299,10 @@ ul.serie > li > a:hover {
   }
 }
 
-.related-title {
+.label {
   margin-block-start: 1.5em;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 ul.related {

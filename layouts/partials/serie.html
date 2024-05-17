@@ -1,7 +1,7 @@
 {{- if .Params.series }}
 {{- $currentPage := . -}}
 <div class="serie">
-    <p>{{ i18n "serie-title" (dict "name" (index .Params.series 0)) }}</p>
+    <p class="label">{{ i18n "serie-title" (dict "name" (index .Params.series 0)) }}</p>
     
     <ul class="serie">
         {{- range .Params.series }}
