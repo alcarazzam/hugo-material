@@ -1,0 +1,17 @@
+{{- if .Params.series }}
+{{- $currentPage := . -}}
+<div class="serie">
+    <p>{{ i18n "serie-title" (dict "name" (index .Params.series 0)) }}</p>
+    
+    <ul class="serie">
+        {{- range .Params.series }}
+        {{- $series := site.Taxonomies.series }}
+        {{- $posts := $series.Get . }}
+        
+        {{- range $posts -}}
+            <li><a href="{{ .RelPermalink }}"{{ if .Eq $currentPage }} class="current"{{ end }}>{{ .Title }}</a></li>
+        {{- end -}}
+        {{- end -}}
+    </ul>
+</div>
+{{- end -}}

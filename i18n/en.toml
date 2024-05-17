@@ -7,3 +7,5 @@ previous-page = "previous"
 page-number = "Page {{ .number }} of {{ .total }}"
 next-page = "next"
 last-page = "last page »"
+
+serie-title = "All posts in {{ .name }}"

@@ -40,6 +40,7 @@ paginate = 10
 
 [taxonomies]
   tag = 'tags'
+  series = 'series'
 
 [menus]
 [[menus.main]]
@@ -56,7 +57,10 @@ paginate = 10
     pages = '/:slug/'
 
 [params]
-  author = "Me"
+  [params.author]
+    email = 'example@example.com'
+    name = 'Me'
+
   showRelated = true
   footerHtml = "Copyright 2024. All rights reserved."
 ```
