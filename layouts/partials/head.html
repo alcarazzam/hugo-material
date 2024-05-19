@@ -19,7 +19,7 @@
     "headline": {{ .Title | plainify }},
     "author": {
         "@type": "Person",
-        "name": {{ .Params.author | default site.Params.author }}
+        "name": {{ .Params.author | default site.Params.author.name }}
     },
     "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify  }}{{ end }},
     "publisher": {
