@@ -10,6 +10,9 @@
 <meta name="robots" content="noindex">
 {{ end }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ end }}{{ end }}">
+{{- with .Site.Params.me }}
+<link rel="me" href="{{ . | safeURL }}" />
+{{- end }}
 
 {{- if and .IsPage (eq .Type "posts") }}
 <script type="application/ld+json">

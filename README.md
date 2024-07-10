@@ -57,12 +57,13 @@ paginate = 10
     pages = '/:slug/'
 
 [params]
+  showRelated = true
+  footerHtml = "Copyright 2024. All rights reserved."
+  me = 'https://example.com'
+
   [params.author]
     email = 'example@example.com'
     name = 'Me'
-
-  showRelated = true
-  footerHtml = "Copyright 2024. All rights reserved."
 ```
 
 ## Roadmap
