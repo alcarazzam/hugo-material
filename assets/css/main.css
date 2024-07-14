@@ -15,7 +15,7 @@ main {
 p {
   margin-block: 1em;
   font-size: 1em;
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -34,7 +34,7 @@ ul {
 
 li {
   font-size: 1em;
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 pre {
@@ -44,6 +44,10 @@ pre {
   border-radius: 12px;
   font-family: monospace;
   font-size: 1em;
+}
+
+img {
+  max-width: 100%;
 }
 
 .site-header {
