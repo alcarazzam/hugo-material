@@ -44,6 +44,7 @@ pre {
   border-radius: 12px;
   font-family: monospace;
   font-size: 1em;
+  overflow: auto;
 }
 
 img {
