@@ -36,7 +36,8 @@ theme = 'material'
 
 enableRobotsTXT = true
 
-paginate = 10
+[pagination]
+  pagerSize = 10
 
 [taxonomies]
   tag = 'tags'
