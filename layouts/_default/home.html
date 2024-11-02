@@ -10,7 +10,14 @@
   <a class="page-link" href="{{ .RelPermalink }}">
     <div class="link-content">
       <p class="title">{{ .LinkTitle }}</p>
-      <p>{{ .Summary | plainify | truncate 150 }}</p>
+      {{- with .Summary -}}
+        <p>{{ . | plainify | truncate 150 }}</p>
+      {{- end -}}
+      <p>
+        {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
+        {{- $dateHuman := .Date | time.Format ":date_long" -}}
+        <time datetime="{{ $dateMachine }}" class="date">{{ $dateHuman }}</time>
+      </p>
     </div>
   </a>
 {{- end -}}
