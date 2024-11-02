@@ -10,7 +10,7 @@
     <a href="{{ .RelPermalink }}">
         <div class="content">
             <p class="title">{{ .LinkTitle }}</p>
-            <p>{{ .Summary | truncate 120 }}</p>
+            <p>{{ .Summary | plainify | truncate 120 }}</p>
         </div>
     </a>
  </li>
