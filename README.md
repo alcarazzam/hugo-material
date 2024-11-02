@@ -49,13 +49,9 @@ enableRobotsTXT = true
   pageRef = '/tags/'
   weight = 10
 [[menus.footer]]
-  name = 'GitHub'
-  url = 'https://github.com/'
+  name = 'Example'
+  url = 'https://example.com/'
   weight = 10
-
-[permalinks]
-  [permalinks.page]
-    pages = '/:slug/'
 
 [params]
   showRelated = true
@@ -65,6 +61,7 @@ enableRobotsTXT = true
   [params.author]
     email = 'example@example.com'
     name = 'Me'
+    mastodon = '@example@example.com'
 ```
 
 ## Roadmap

@@ -17,6 +17,9 @@
 {{- template "_internal/opengraph.html" . -}}
 
 {{- if and .IsPage (eq .Type "posts") }}
+{{ with .Params.author.mastodon | default site.Params.author.mastodon }}
+<meta name="fediverse:creator" content="{{ . }}" />
+{{ end }}
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -24,7 +27,7 @@
     "headline": {{ .Title | plainify }},
     "author": {
         "@type": "Person",
-        "name": {{ .Params.author | default site.Params.author.name }}
+        "name": {{ .Params.author.name | default site.Params.author.name }}
     },
     "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify  }}{{ end }},
     "publisher": {
