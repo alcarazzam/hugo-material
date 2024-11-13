@@ -51,6 +51,14 @@ img {
   max-width: 100%;
 }
 
+.note {
+  padding: 16px;
+  border-radius: 12px;
+  margin-block: 1em;
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface)
+}
+
 .site-header {
   display: flex;
 }
