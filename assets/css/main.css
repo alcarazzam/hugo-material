@@ -12,6 +12,10 @@ main {
   padding: 8px;
 }
 
+article > header {
+  margin-block-end: 1em;
+}
+
 p {
   margin-block: 1em;
   font-size: 1em;
@@ -49,6 +53,13 @@ pre {
 
 img {
   max-width: 100%;
+  height: auto;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .note {
@@ -96,6 +107,10 @@ nav > ul > li {
 
 nav > ul > li:first-child {
   padding-inline-start: 0;
+}
+
+nav > ul > li:last-child {
+  padding-inline-end: 0;
 }
 
 nav > ul > li > a {
