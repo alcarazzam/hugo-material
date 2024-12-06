@@ -1,4 +1,4 @@
-<div class="note">
-    {{ .Inner }}
+<div class="note{{ if len .Params | eq 1 }} {{ .Get 0 }}{{ end }}">
+    {{ .Inner | markdownify }}
 </div>
 
