@@ -6,7 +6,7 @@
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
 {{- end }}
-{{ if (and .IsNode (not .IsHome) ) }}
+{{ if (or (.Param "noindex") (and .IsNode (not .IsHome) ) ) }}
 <meta name="robots" content="noindex">
 {{ end }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ end }}{{ end }}">
