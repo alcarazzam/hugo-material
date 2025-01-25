@@ -57,6 +57,7 @@ enableRobotsTXT = true
   showRelated = true
   footerHtml = "Copyright 2024. All rights reserved."
   me = 'https://example.com'
+  logo = '/logo.png'
 
   [params.author]
     email = 'example@example.com'

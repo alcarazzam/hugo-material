@@ -13,6 +13,9 @@
 {{- with .Site.Params.me }}
 <link rel="me" href="{{ . | safeURL }}" />
 {{- end }}
+{{- with .Site.Params.icon }}
+<link rel="icon" href="{{ . }}" />
+{{- end }}
 
 {{- template "_internal/opengraph.html" . -}}
 
